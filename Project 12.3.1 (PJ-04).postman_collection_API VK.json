@@ -1,0 +1,608 @@
+{
+	"info": {
+		"_postman_id": "2668085c-ccc2-405c-a251-a41cefc07b55",
+		"name": "Проект 12.3.1 (PJ-04)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34256235"
+	},
+	"item": [
+		{
+			"name": "createAlbum (п2_Создание альбома)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.vk.com/method/photos.createAlbum?title=\"ALBUM\"&v=5.231&client_id=6287487&access_token=vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA",
+					"protocol": "https",
+					"host": [
+						"api",
+						"vk",
+						"com"
+					],
+					"path": [
+						"method",
+						"photos.createAlbum"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "\"ALBUM\""
+						},
+						{
+							"key": "v",
+							"value": "5.231"
+						},
+						{
+							"key": "client_id",
+							"value": "6287487"
+						},
+						{
+							"key": "access_token",
+							"value": "vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "photos.getUploadServer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.vk.com/method/photos.getUploadServer?album_id=300885267&v=5.231&access_token=vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA",
+					"protocol": "https",
+					"host": [
+						"api",
+						"vk",
+						"com"
+					],
+					"path": [
+						"method",
+						"photos.getUploadServer"
+					],
+					"query": [
+						{
+							"key": "album_id",
+							"value": "300885267"
+						},
+						{
+							"key": "v",
+							"value": "5.231"
+						},
+						{
+							"key": "access_token",
+							"value": "vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload_url (п3_загрузка фото)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file1",
+							"type": "file",
+							"src": "postman-cloud:///1ef0269c-0571-4990-9ce8-24fdee23a89b"
+						},
+						{
+							"key": "file2",
+							"type": "file",
+							"src": "postman-cloud:///1ef0269c-4710-4ea0-acd2-2d783cd4a7b4"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://pu.vk.com/c907528/ss2322/upload.php?act=do_add&mid=859976194&aid=300885267&gid=0&hash=c4375f7b5dabdce6b23939afbbea6a1e&rhash=db095ae7349821bd75cd7245987a7cff&swfupload=1&api=1",
+					"protocol": "https",
+					"host": [
+						"pu",
+						"vk",
+						"com"
+					],
+					"path": [
+						"c907528",
+						"ss2322",
+						"upload.php"
+					],
+					"query": [
+						{
+							"key": "act",
+							"value": "do_add"
+						},
+						{
+							"key": "mid",
+							"value": "859976194"
+						},
+						{
+							"key": "aid",
+							"value": "300885267"
+						},
+						{
+							"key": "gid",
+							"value": "0"
+						},
+						{
+							"key": "hash",
+							"value": "c4375f7b5dabdce6b23939afbbea6a1e"
+						},
+						{
+							"key": "rhash",
+							"value": "db095ae7349821bd75cd7245987a7cff"
+						},
+						{
+							"key": "swfupload",
+							"value": "1"
+						},
+						{
+							"key": "api",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "photos.save (п3_сохранение фото в альбом)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://api.vk.com/method/photos.save?photos_list={{photos_list}}&server=907528&album_id=300885267&access_token=vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA&v=5.231&hash=d64fb81409c7a3ece1816e366d6334d8",
+					"protocol": "https",
+					"host": [
+						"api",
+						"vk",
+						"com"
+					],
+					"path": [
+						"method",
+						"photos.save"
+					],
+					"query": [
+						{
+							"key": "photos_list",
+							"value": "{{photos_list}}"
+						},
+						{
+							"key": "server",
+							"value": "907528"
+						},
+						{
+							"key": "album_id",
+							"value": "300885267"
+						},
+						{
+							"key": "access_token",
+							"value": "vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA"
+						},
+						{
+							"key": "v",
+							"value": "5.231"
+						},
+						{
+							"key": "hash",
+							"value": "d64fb81409c7a3ece1816e366d6334d8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "photos.get (п4_список фото в альбоме)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.vk.com/method/photos.get?album_id=300885267&owner_id=859976194&access_token=vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA&v=5.231&photo_sizes=1&rev=1&extended=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"vk",
+						"com"
+					],
+					"path": [
+						"method",
+						"photos.get"
+					],
+					"query": [
+						{
+							"key": "album_id",
+							"value": "300885267"
+						},
+						{
+							"key": "owner_id",
+							"value": "859976194"
+						},
+						{
+							"key": "access_token",
+							"value": "vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA"
+						},
+						{
+							"key": "v",
+							"value": "5.231"
+						},
+						{
+							"key": "photo_sizes",
+							"value": "1"
+						},
+						{
+							"key": "rev",
+							"value": "1"
+						},
+						{
+							"key": "extended",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "photos.createComment (п5_добавление комментария 1)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.vk.com/method/photos.createComment?owner_id=859976194&message=красивое фото&photo_id=457239071&from_group=0&access_token=vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA&v=5.231",
+					"protocol": "https",
+					"host": [
+						"api",
+						"vk",
+						"com"
+					],
+					"path": [
+						"method",
+						"photos.createComment"
+					],
+					"query": [
+						{
+							"key": "owner_id",
+							"value": "859976194"
+						},
+						{
+							"key": "message",
+							"value": "красивое фото"
+						},
+						{
+							"key": "photo_id",
+							"value": "457239071"
+						},
+						{
+							"key": "from_group",
+							"value": "0"
+						},
+						{
+							"key": "access_token",
+							"value": "vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA"
+						},
+						{
+							"key": "v",
+							"value": "5.231"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "photos.createComment (п5_добавление комментария 2)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.vk.com/method/photos.createComment?owner_id=859976194&message=люблю нарциссы&photo_id=457239070&from_group=0&access_token=vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA&v=5.231",
+					"protocol": "https",
+					"host": [
+						"api",
+						"vk",
+						"com"
+					],
+					"path": [
+						"method",
+						"photos.createComment"
+					],
+					"query": [
+						{
+							"key": "owner_id",
+							"value": "859976194"
+						},
+						{
+							"key": "message",
+							"value": "люблю нарциссы"
+						},
+						{
+							"key": "photo_id",
+							"value": "457239070"
+						},
+						{
+							"key": "from_group",
+							"value": "0"
+						},
+						{
+							"key": "access_token",
+							"value": "vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA"
+						},
+						{
+							"key": "v",
+							"value": "5.231"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "photos.editComment (п6_редактирование комментария)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.vk.com/method/photos.editComment?owner_id=859976194&comment_id=9&message=Безумно красивое фото&access_token=vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA&v=5.231",
+					"protocol": "https",
+					"host": [
+						"api",
+						"vk",
+						"com"
+					],
+					"path": [
+						"method",
+						"photos.editComment"
+					],
+					"query": [
+						{
+							"key": "owner_id",
+							"value": "859976194"
+						},
+						{
+							"key": "comment_id",
+							"value": "9"
+						},
+						{
+							"key": "message",
+							"value": "Безумно красивое фото"
+						},
+						{
+							"key": "access_token",
+							"value": "vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA"
+						},
+						{
+							"key": "v",
+							"value": "5.231"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "photos.delete (п7_удаление фото)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.vk.com/method/photos.delete?owner_id=859976194&photo_id=457239071&access_token=vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA&v=5.231",
+					"protocol": "https",
+					"host": [
+						"api",
+						"vk",
+						"com"
+					],
+					"path": [
+						"method",
+						"photos.delete"
+					],
+					"query": [
+						{
+							"key": "owner_id",
+							"value": "859976194"
+						},
+						{
+							"key": "photo_id",
+							"value": "457239071"
+						},
+						{
+							"key": "access_token",
+							"value": "vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA"
+						},
+						{
+							"key": "v",
+							"value": "5.231"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "photos.deleteAlbum (п8_удаление альбома)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.vk.com/method/photos.deleteAlbum?album_id=300885267&access_token=vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA&v=5.231",
+					"protocol": "https",
+					"host": [
+						"api",
+						"vk",
+						"com"
+					],
+					"path": [
+						"method",
+						"photos.deleteAlbum"
+					],
+					"query": [
+						{
+							"key": "album_id",
+							"value": "300885267"
+						},
+						{
+							"key": "access_token",
+							"value": "vk1.a.8Y16fONfXAGxRag8VLU3xECCP9C7vKbfcwk7O_vGmPKCLJslU1hL0NCwepSjKFR4Cofig81NEmPjaUkiov_AvWhcTXICVur1ZbbLKwvJ0nQOA-3mKecTim2tTfP07s1MU76v1QC-kKpj5rLE-h9pPNBnwnFXjwL6k3YYx3XGrfdesbkHXTCZ9jcSAwb5bGzJJgSXlpSlf_APfsGNaEztAA"
+						},
+						{
+							"key": "v",
+							"value": "5.231"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
